@@ -5,6 +5,7 @@
     <modules>
         <module>eureka-server</module>
         <module>producer</module>
+        <module>consul</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
