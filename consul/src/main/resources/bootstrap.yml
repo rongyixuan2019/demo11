@@ -1,0 +1,30 @@
+server:
+  port: 8181
+spring:
+  application:
+    name: consul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: consul
+      config:
+        info: "consul config info"
+
+---
+spring:
+  profiles: dev
+  cloud:
+    consul:
+      config:
+        #是否启用配置中心功能
+        enabled: true
+        #设置配置值的格式
+        format: yam1
+        #设置配置所在目录
+        prefix: config
+        #设置配置的分隔符
+        profile-separator: ':'
+        #配置key的名字,由于consul是k/v存储,配置存储在对应k的v中
+        data-key: data
