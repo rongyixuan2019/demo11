@@ -1,3 +1,6 @@
+#  consul.exe agent -dev # -dev表示开发模式运行，另外还有-server表示服务模式运行
+#在 d盘运行cmd 并 consul.exe agent -dev  就可以访问consul注册中心了
+# http://127.0.0.1:8500/ 浏览器输入网址
 server:
   port: 8181
 spring:
